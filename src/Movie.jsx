@@ -7,13 +7,10 @@ function Movie({ movie }) {
             <div className='w-full'>
                 <img className='w-full' src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/404"} alt="" />
             </div>
-           <div className="p-2">
-                <p>{movie.Title}</p>
-                <div className="flex items-center justify-between">
-                    <p>{movie.Year}</p>
-                        <p>{movie.Type}</p>
-                </div>
-           </div>
+            <div className="flex items-center justify-between p-2">
+                <p>{movie.Type}</p>
+                <p>{movie.Year}</p>
+            </div>
         </div>
     )
 }
