@@ -3,27 +3,25 @@ import './App.css'
 import Icon from './search.svg'
 import Movie from './Movie';
 const url = "http://www.omdbapi.com/?apikey=413b7415";
-const movie = {
-    "Title": "Batman Begins",
-    "Year": "2005",
-    "imdbID": "tt0372784",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-}
-
 
 function App() {
+
     const [movies, setMovies] = useState([])
-    const [search, setSearch] = useState(" ")
+    const [search, setSearch] = useState("")
+    const [searched, setSearched] = useState(false); 
     
     async function searchMovie (title) {
-        const response = await fetch(`${url}&s=${title}`)
-        const data = await response.json()
-        setMovies(data.Search)
+        try {
+            const response = await fetch(`${url}&s=${title}`)
+            const data = await response.json()
+            setMovies(data.Search)
+            setSearched(true);
+            console.log(data.Search)
+        }
+        catch(err){
+            console.log(err)
+        }
     }
-
-    useEffect(() => {
-    }, [])
 
   return (
     <>
@@ -35,18 +33,13 @@ function App() {
                 <img onClick={() => {searchMovie(search)}} src={Icon} alt="" className="w-6 h-6 absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer"/>
             </div>
 
-            {
-                movies?.length >0 ? 
-                (
-                    <div className='grid grid-cols-4 gap-5 mt-10'>
-                    {movies.map( (movie) => <Movie movie={movie} />)}
-                    </div>
-                ) 
-                : 
-                (
-                    <h2>No Movies Found</h2>
-                ) 
-            }
+            {searched && movies?.length > 0 ? 
+            (<div className='grid grid-cols-4 gap-5 mt-10'>
+                    {movies.map( (movie) => <Movie key={movie.imdbID} movie={movie} />)}
+                </div>)
+            : searched ?
+            (<h2 className='mt-10 text-xl text-center'>No Movies Found</h2>) 
+            :(null)}
 
         </main> 
     </div>

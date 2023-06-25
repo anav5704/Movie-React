@@ -5,3 +5,23 @@
 @layer base {
 
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff47;
+  }
