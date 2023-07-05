@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 // import Icon from './search.svg'
 import Movie from './Movie';
-const url = "http://www.omdbapi.com/?apikey=413b7415";
+const url = "https://www.omdbapi.com/?apikey=413b7415";
 
  function Icon () {
     return (
