@@ -2,16 +2,23 @@
 
 ![hero](https://github.com/anav5704/Movie-React/blob/main/docs/imnotdb.png)
 
-This is a simple movie website where users can search up movies, tv shows and anime. This was my first ever React JS project and uses the open movie database  (OMDB) api to fetch the results. I was blow away when I had learnt about conditional rendering user JavaScript ternary opeerators.
+This is a simple movie website where users can search up movies, tv shows and anime. This was my first ever React JS project and uses the open movie database  (OMDB) API to fetch the results. I was blow away when I had learnt about conditional rendering user JavaScript ternary opeerators.
 
 ## Technologies Used
 
 - React JS
-- OMDB api
+- OMDB API
 
 ## Getting Started
 
-First fork and clone the repo. First run ```npm install``` to download all the dependencies. Once that is done, run npm start to view it on localhost. No need to worry about the api key, mine is still in there.
+First fork and clone the repo. First run ```npm install``` to download all the dependencies. Now make a ```.env``` file in the root of the project and add your API key from OMDB:
+
+```
+VITE_API_KEY
+```
+
+
+Once that is done, run npm start to view it on localhost.
 
 ## Learning Resources
 
