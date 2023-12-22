@@ -11,7 +11,7 @@ This is a simple movie website where users can search for movies, TV shows, and 
 
 ## Getting Started
 
-First fork and clone the repo. First run ```npm install``` to download all the dependencies. Now make a ```.env``` file in the root of the project and add your API key from OMDB:
+First fork and clone the repo. Then, run ```npm install``` to download all the dependencies. Now make a ```.env``` file in the root of the project and add your API key from OMDB:
 
 ```
 VITE_API_KEY
