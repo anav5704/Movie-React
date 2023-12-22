@@ -24,4 +24,3 @@ Once that is done, run npm start to view it on localhost.
 - [React JS crash course](https://www.youtube.com/watch?v=b9eMGE7QtTk)
 - [React JS in 100 seconds](https://www.youtube.com/watch?v=HyWYpM_S-2c)
 - [React JS docs](https://react.dev/)
-    
